@@ -21,4 +21,12 @@ def book_search(inventor, title):
             return book 
     return None
 
+# Buch nach Preis filtern
+def book_filter_price(inventory, max_price):
+    filtered_books = []
+    for book in inventory:
+        if book['price'] <= max_price:
+            filtered_books.append(book)
+    return filtered_books
+
 
