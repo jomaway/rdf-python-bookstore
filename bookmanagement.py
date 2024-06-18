@@ -29,4 +29,10 @@ def book_filter_price(inventory, max_price):
             filtered_books.append(book)
     return filtered_books
 
+# Gesamtwert berechnen
+def book_total_value(inventory):
+    total = 0
+    for book in inventory:
+        total += book['price']
+    return total
 
