@@ -36,3 +36,22 @@ def book_total_value(inventory):
         total += book['price']
     return total
 
+
+if __name__ == '__main__':
+    inventory = []
+
+    book_add(inventory,"Bestes Book", "Unknown", 99.23)
+    book_add(inventory,"Get better in python", "python guru", 9.99)
+    book_add(inventory, "Advanced git", "the git profi", 12.99)
+
+    print("Print all books")
+    book_list(inventory)
+
+    python_book = book_search(inventory, "get better in python")
+    print(f"A good book for learning python: {python_book}")
+
+    cheap_books = book_filter_price(inventory, 15)
+    print("List all cheap books")
+    book_list(cheap_books)
+
+    print(f"Gesamtwert der Bibliothek: {book_total_value(inventory)}")
